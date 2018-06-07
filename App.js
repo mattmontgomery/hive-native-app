@@ -7,9 +7,9 @@ import axiosMiddleware from "redux-axios-middleware";
 import HiveReducer from "./reducers/HiveReducer";
 import StoryList from "./components/StoryList";
 
-import { HIVE_API_TOKEN } from "react-native-dotenv";
+import { HIVE_API_TOKEN, HIVE_BASE_URL } from "react-native-dotenv";
 const client = axios.create({
-  baseURL: "https://secure.hive.pub",
+  baseURL: HIVE_BASE_URL,
   responseType: "json",
   headers: {
     Authentication: `token ${HIVE_API_TOKEN}`
